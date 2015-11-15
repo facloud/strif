@@ -1,0 +1,21 @@
+#!/bin/bash
+root_path=$(cd "$(dirname $BASH_SOURCE)/.."; pwd)
+
+# Spawn web
+cd "${root_path}/web"
+python server.py &
+web_pid=$!
+cd -
+echo "[INFO] Web PID: ${web_pid}."
+
+# Run tests
+behave $root_path/acceptance
+behave_exit_code=$?
+
+# Kill the arsehole
+echo "[INFO] Killing web..."
+kill -9 "${web_pid}"
+echo "[INFO] All microservices are gone (hopefully)."
+
+exit "${behave_exit_code}"
+
