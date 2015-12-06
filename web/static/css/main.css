@@ -1,0 +1,16 @@
+body {
+    background-color: #fcf0e4;
+}
+div#MainContainer {
+    margin: 5px;
+}
+div#LogoContainer {
+    text-align: center;
+}
+img#Logo {
+    width: 70%;
+}
+div#Chant em {
+    margin-bottom: 5px;
+    display: block;
+}

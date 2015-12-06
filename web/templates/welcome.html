@@ -1,5 +1,53 @@
 <html>
+  <head>
+    <title>Strif</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+
   <body>
-    Welcome to strif
+    <div class="pure-g" id="MainContainer">
+      <div class="pure-u-1-5">
+        <h3>Welcome to strif</h3>
+
+        <p>Strif is a FaCloud enterprise product, that aims to facilitate the scheduling of your trips. We are so awesome and we just can't hide it.</p>
+
+        <div id="LogoContainer">
+          <img id="Logo" src="/static/img/logo.png" alt="Our awesome logo">
+        </div>
+
+        <div id="Chant">
+          <em>Last chistmas I gave you my fart</em>
+          <em>but the very next day, you farted away</em>
+          <em>this year, my fart gives me tears</em>
+          <em>I will come and fart in your birthday</em>
+        </div>
+      </div>
+      <div class="pure-u-4-5">
+        <form class="pure-form pure-form-aligned" action="/dev/null">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="StartDate">Start date</label>
+                    <input id="StartDate" class="pure-input-1-4" name="startDate" type="text" placeholder="e.g.: 2015-12-12">
+                </div>
+                <div class="pure-control-group">
+                    <label for="EndDate">End date</label>
+                    <input id="EndDate"  class="pure-input-1-4" name="endDate" type="text" placeholder="e.g.: 2015-12-20">
+                </div>
+                <div class="pure-control-group">
+                    <label for="PlacesList">
+                      List of places<br>
+                      <small>one place per line</small>
+                    </label>
+                    <textarea id="PlacesList" class="pure-input-1-2" name="placesList" rows="10" cols="50"></textarea>
+                </div>
+                <div class="pure-controls">
+                    <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
